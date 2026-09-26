@@ -1,0 +1,70 @@
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+
+======================================================================
+PC-GITA ReadText
+======================================================================
+  hand-crafted (60-d)                acc 0.790 [0.71,0.87]  AUC 0.849 [0.77,0.92]  MCC 0.580  sens 0.78 spec 0.80
+  wav2vec2 layer 6                   acc 0.840 [0.77,0.91]  AUC 0.858 [0.77,0.93]  MCC 0.685  sens 0.78 spec 0.90
+  McNemar b01=8 b10=13 p=0.3833;  dAUC +0.009 [-0.070,+0.087] p=0.8060
+  permutation: AUC 0.858, null mean 0.495, 95th pct 0.615, p = 0.0050
+  layer profile
+    L 0 acc 0.750 AUC 0.829
+    L 1 acc 0.800 AUC 0.855
+    L 2 acc 0.780 AUC 0.838
+    L 3 acc 0.820 AUC 0.859
+    L 4 acc 0.830 AUC 0.873
+    L 5 acc 0.850 AUC 0.862
+    L 6 acc 0.840 AUC 0.858
+    L 7 acc 0.810 AUC 0.840
+    L 8 acc 0.810 AUC 0.843
+    L 9 acc 0.800 AUC 0.851
+    L10 acc 0.810 AUC 0.835
+    L11 acc 0.790 AUC 0.823
+    L12 acc 0.790 AUC 0.835
+
+======================================================================
+PC-GITA Monologue
+======================================================================
+  hand-crafted (60-d)                acc 0.730 [0.64,0.81]  AUC 0.816 [0.72,0.89]  MCC 0.462  sens 0.68 spec 0.78
+  wav2vec2 layer 6                   acc 0.820 [0.74,0.89]  AUC 0.904 [0.84,0.96]  MCC 0.645  sens 0.76 spec 0.88
+  McNemar b01=6 b10=15 p=0.0784;  dAUC +0.088 [+0.012,+0.175] p=0.0220
+  permutation: AUC 0.904, null mean 0.481, 95th pct 0.597, p = 0.0050
+  layer profile
+    L 0 acc 0.840 AUC 0.889
+    L 1 acc 0.800 AUC 0.890
+    L 2 acc 0.810 AUC 0.869
+    L 3 acc 0.820 AUC 0.882
+    L 4 acc 0.830 AUC 0.907
+    L 5 acc 0.820 AUC 0.904
+    L 6 acc 0.820 AUC 0.904
+    L 7 acc 0.820 AUC 0.919
+    L 8 acc 0.840 AUC 0.910
+    L 9 acc 0.840 AUC 0.892
+    L10 acc 0.830 AUC 0.898
+    L11 acc 0.810 AUC 0.892
+    L12 acc 0.830 AUC 0.885
+
+Recording-level checks
+  ReadText   mean_dbfs  AUC 0.601
+  ReadText   peak_dbfs  AUC 0.581
+  ReadText   duration   AUC 0.504
+  Monologue  mean_dbfs  AUC 0.584
+  Monologue  peak_dbfs  AUC 0.576
+  Monologue  duration   AUC 0.509
+
+Cross-corpus transfer (layer 6)
+  [source statistics]  MDVR-KCL (ReadText) -> PC-GITA (ReadText) acc 0.570 [0.47,0.66]  AUC 0.616 [0.50,0.72]  MCC 0.186  sens 0.90 spec 0.24
+  [per-corpus statistics]  MDVR-KCL (ReadText) -> PC-GITA (ReadText) acc 0.550 [0.45,0.65]  AUC 0.630 [0.52,0.74]  MCC 0.101  sens 0.48 spec 0.62
+  [source statistics]  PC-GITA (ReadText) -> MDVR-KCL (ReadText) acc 0.432 [0.27,0.59]  AUC 0.679 [0.50,0.86]  MCC 0.000  sens 1.00 spec 0.00
+  [per-corpus statistics]  PC-GITA (ReadText) -> MDVR-KCL (ReadText) acc 0.649 [0.51,0.81]  AUC 0.702 [0.52,0.88]  MCC 0.279  sens 0.56 spec 0.71
+  [source statistics]  MDVR-KCL (SpontaneousDialogue) -> PC-GITA (Monologue) acc 0.620 [0.53,0.71]  AUC 0.725 [0.62,0.82]  MCC 0.247  sens 0.74 spec 0.50
+  [per-corpus statistics]  MDVR-KCL (SpontaneousDialogue) -> PC-GITA (Monologue) acc 0.730 [0.64,0.81]  AUC 0.733 [0.63,0.83]  MCC 0.465  sens 0.66 spec 0.80
+  [source statistics]  PC-GITA (Monologue) -> MDVR-KCL (SpontaneousDialogue) acc 0.694 [0.53,0.83]  AUC 0.829 [0.68,0.95]  MCC 0.478  sens 0.93 spec 0.52
+  [per-corpus statistics]  PC-GITA (Monologue) -> MDVR-KCL (SpontaneousDialogue) acc 0.694 [0.56,0.83]  AUC 0.816 [0.67,0.94]  MCC 0.416  sens 0.80 spec 0.62
+  [source statistics]  Italian (ReadText) -> PC-GITA (ReadText) acc 0.500 [0.40,0.60]  AUC 0.635 [0.52,0.74]  MCC 0.000  sens 1.00 spec 0.00
+  [per-corpus statistics]  Italian (ReadText) -> PC-GITA (ReadText) acc 0.510 [0.41,0.61]  AUC 0.631 [0.52,0.74]  MCC 0.024  sens 0.78 spec 0.24
+  [source statistics]  PC-GITA (ReadText) -> Italian (ReadText) acc 0.578 [0.42,0.71]  AUC 0.643 [0.47,0.80]  MCC 0.143  sens 0.83 spec 0.29
+  [per-corpus statistics]  PC-GITA (ReadText) -> Italian (ReadText) acc 0.600 [0.44,0.73]  AUC 0.663 [0.49,0.82]  MCC 0.230  sens 0.46 spec 0.76
+
+saved work_pcgita/results.csv

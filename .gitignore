@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+work/
+26-29_09_2017_KCL/
+26_29_09_2017_KCL/
+synthetic_KCL/
+Italian Parkinson's Voice and speech/
+PC-GITA_per_task_44100Hz/
+work_italian/
+work_pcgita/
+*.npz
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz

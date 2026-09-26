@@ -1,0 +1,46 @@
+C:\Users\Administrator\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+corpus: {0: 21, 1: 24} speakers; 93 recordings; 894 segments
+
+1. Within-corpus LOSOCV
+  hand-crafted (60-d)                    acc 0.978 [0.93,1.00]  AUC 0.992 [0.97,1.00]  MCC 0.956  sens 0.96 spec 1.00
+  wav2vec2 layer 6                       acc 0.978 [0.93,1.00]  AUC 0.984 [0.94,1.00]  MCC 0.956  sens 0.96 spec 1.00
+  McNemar b01=0 b10=0 p=1.0000;  dAUC -0.008 [-0.032,+0.000] p=0.7760
+  permutation: AUC 0.984, null mean 0.465, 95th pct 0.651, p = 0.0050
+
+2. Layer profile
+  L 0 acc 0.978 AUC 0.994
+  L 1 acc 0.978 AUC 0.996
+  L 2 acc 0.978 AUC 0.996
+  L 3 acc 0.978 AUC 0.996
+  L 4 acc 0.978 AUC 0.986
+  L 5 acc 0.978 AUC 0.982
+  L 6 acc 0.978 AUC 0.984
+  L 7 acc 0.978 AUC 0.974
+  L 8 acc 0.978 AUC 0.974
+  L 9 acc 0.978 AUC 0.980
+  L10 acc 0.978 AUC 0.974
+  L11 acc 0.978 AUC 0.974
+  L12 acc 0.978 AUC 0.990
+
+3. Recording-level checks
+  sr         AUC 0.667
+  mean_dbfs  AUC 0.546
+  peak_dbfs  AUC 0.542
+  speakers by group and sample rate:
+ label  sr   
+0      16000    21
+1      16000    16
+       44100     8
+  wav2vec2 layer 6, 16 kHz speakers only acc 1.000 [1.00,1.00]  AUC 1.000 [1.00,1.00]  MCC 1.000  sens 1.00 spec 1.00
+  hand-crafted, 16 kHz speakers only     acc 1.000 [1.00,1.00]  AUC 1.000 [1.00,1.00]  MCC 1.000  sens 1.00 spec 1.00
+  PD recall at 16000 Hz: 1.000 (n=16)
+  PD recall at 44100 Hz: 0.875 (n=8)
+
+4. Cross-corpus transfer (ReadText, layer 6)
+  [source statistics]  MDVR-KCL -> Italian                    acc 0.711 [0.58,0.84]  AUC 0.839 [0.70,0.94]  MCC 0.430  sens 0.88 spec 0.52
+  [per-corpus statistics]  MDVR-KCL -> Italian                    acc 0.778 [0.64,0.89]  AUC 0.817 [0.67,0.93]  MCC 0.602  sens 0.62 spec 0.95
+  [source statistics]  Italian -> MDVR-KCL                    acc 0.459 [0.30,0.62]  AUC 0.827 [0.68,0.96]  MCC 0.145  sens 1.00 spec 0.05
+  [per-corpus statistics]  Italian -> MDVR-KCL                    acc 0.486 [0.32,0.65]  AUC 0.818 [0.67,0.95]  MCC 0.128  sens 0.94 spec 0.14
+
+saved work_italian/results.csv

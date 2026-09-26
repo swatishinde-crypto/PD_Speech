@@ -1,0 +1,7 @@
+task,variable,auc
+ReadText,mean_dbfs,0.6008
+ReadText,peak_dbfs,0.5811999999999999
+ReadText,duration,0.5044
+Monologue,mean_dbfs,0.5835999999999999
+Monologue,peak_dbfs,0.5758
+Monologue,duration,0.5092000000000001
